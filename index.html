@@ -10,6 +10,9 @@
     />
   </head>
   <style>
+    * {
+      scroll-behavior: smooth;
+    }
     header {
       background-color: #333;
       color: #fff;
@@ -141,6 +144,10 @@
       color: #fff;
     }
 
+    .languages .card-body {
+      display: flex;
+    }
+
     button {
       padding: 10px 20px;
       border: none;
@@ -163,12 +170,90 @@
       color: black;
     }
 
-    #work{
-        background-color: #171e22; /* Dark blue ocean color */
+    #work {
+      background-color: #171e22; /* Dark blue ocean color */
     }
 
-    h2{
+    h2 {
+      color: #fff;
+    }
+
+    @media screen and (max-width: 768px) {
+      .sections h1 {
+        font-size: 2rem;
+      }
+
+      .sections p {
+        font-size: 1rem;
+      }
+
+      .sections img {
+        margin-top: 20px;
+      }
+      .introduction {
+        text-align: center;
+      }
+
+      .introduction h1 {
         color: #fff;
+      }
+
+      .introduction p {
+        color: #fff;
+      }
+
+      .introduction .buttons button {
+        background-color: #fff;
+        color: #333;
+      }
+
+      .languages .card {
+        border: none;
+        background-color: #333;
+        color: #fff;
+      }
+
+      .languages .card h5 {
+        color: #fff;
+      }
+
+      .languages .card p {
+        color: #fff;
+      }
+
+      .languages .card-body {
+        display: flex;
+      }
+
+      button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #333;
+        color: #fff;
+        cursor: pointer;
+      }
+
+      .icons {
+        display: flex;
+        width: 50px;
+        height: 50px;
+      }
+
+      .card-text {
+        color: #fff;
+      }
+
+      .card-text2 {
+        color: black;
+      }
+
+      #work {
+        background-color: #171e22; /* Dark blue ocean color */
+      }
+
+      h2 {
+        color: #fff;
+      }
     }
   </style>
   <body>
@@ -277,7 +362,9 @@
             <div class="col-md-6">
               <div class="card mb-4 bg-dark">
                 <div class="card-body">
-                  <h5 class="card-title"><a href="https://koronaems.hu/">Korona EMS</a></h5>
+                  <h5 class="card-title">
+                    <a href="https://koronaems.hu/">Korona EMS</a>
+                  </h5>
                   <p class="card-text">
                     A small project that grew itself out to a bigger one. It was
                     originally to just learn PHP but now it's an actual website
@@ -293,15 +380,21 @@
             </div>
             <div class="col-md-6">
               <div class="card mb-4 bg-dark">
-                <div class="card-body ">
-                  <h5 class="card-title"><a href="https://www.youtube.com/@cs0ng0r">FiveM Server Development</a></h5>
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href="https://www.youtube.com/@cs0ng0r"
+                      >FiveM Server Development</a
+                    >
+                  </h5>
                   <p class="card-text">
                     I've worked on several FiveM servers, such as Florida State
-                    Roleplay and on my own servers which I've never opened to the public. I mainly post tutorials on my YouTube channel about FiveM development.   
+                    Roleplay and on my own servers which I've never opened to
+                    the public. I mainly post tutorials on my YouTube channel
+                    about FiveM development.
                   </p>
                 </div>
                 <img
-                  src="src/koronaems.png"
+                  src="src/lua.png"
                   class="card-img-top"
                   alt="Work Image 2"
                 />
@@ -312,7 +405,7 @@
       </section>
     </main>
 
-    <footer class="bg-dark text-white text-center py-3">
+    <footer class="bg-dark text-white text-center py-1">
       <p>&copy; 2024 My Portfolio</p>
     </footer>
 
