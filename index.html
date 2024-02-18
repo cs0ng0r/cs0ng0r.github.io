@@ -1,242 +1,323 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Developer Portfolio</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
-<style>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <style>
+    header {
+      background-color: #333;
+      color: #fff;
+    }
 
-        /* body {
-                font-family: Arial, sans-serif;
-        } */
+    .profile-image {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+    }
 
-        header {
-                background-color: #333;
-                color: #fff;
-        }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
 
-        
-        .profile-image {
-                width: 200px;
-                height: 200px;
-                object-fit: cover;
-        }
-        
-        .buttons {
-                display: flex;
-                justify-content: center;
-                gap: 10px;
-        }
-        
-        .buttons button {
-                padding: 10px 20px;
-                border: none;
-                border-radius: 10px;
-                background-color: #333;
-                color: #fff;
-                cursor: pointer;
-        }
-        
-        .buttons button a {
-                color: #fff;
-                text-decoration: none;
-        }
-        
-        .buttons button:hover {
-                background-color: #555;
-        }
-        
-        .sections {
-                background-color: #082336; /* Dark blue ocean color */
-                padding: 100px 0;
-        }
-        
-        .sections h1 {
-                font-size: 3rem;
-        }
-        
-        .sections p {
-                font-size: 1.5rem;
-        }
-        
-        .sections img {
-                margin-top: 20px;
-        }
-        .introduction {
-                text-align: center;
-        }
+    .buttons button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 10px;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
 
-        .introduction h1 {
-                color: #fff;
-        }
+    .buttons button a {
+      color: #fff;
+      text-decoration: none;
+    }
 
-        .introduction p {
-                color: #fff;
-        }
+    .buttons button:hover {
+      background-color: #555;
+    }
 
-        .introduction .buttons button {
-                background-color: #fff;
-                color: #333;
-        }
+    .sections h1 {
+      font-size: 3rem;
+    }
 
-        .languages .card {
-                border: none;
-                background-color: #333;
-                color: #fff;
-        }
+    .sections p {
+      font-size: 1.5rem;
+    }
 
-        .languages .card h5 {
-                color: #fff;
-        }
+    .sections img {
+      margin-top: 20px;
+    }
+    .introduction {
+      text-align: center;
+    }
 
-        .languages .card p {
-                color: #fff;
-        }
+    .introduction h1 {
+      color: #fff;
+    }
 
-        .work .card {
-                border: none;
-        }
+    .introduction p {
+      color: #fff;
+    }
 
-        button {
-                padding: 10px 20px;
-                border: none;
-                background-color: #333;
-                color: #fff;
-                cursor: pointer;
-        }
+    .introduction .buttons button {
+      background-color: #fff;
+      color: #333;
+    }
 
-        .icons{
-            display: flex;
-                width: 50px;
-                height: 50px;
-        
-        }
-</style>
-<body>
+    .languages .card {
+      border: none;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .languages .card h5 {
+      color: #fff;
+    }
+
+    .languages .card p {
+      color: #fff;
+    }
+
+    .work .card {
+      border: none;
+    }
+
+    .sections {
+      background-color: #171e22; /* Dark blue ocean color */
+    }
+
+    .sections {
+      padding: 100px 0;
+    }
+
+    .sections h1 {
+      font-size: 3rem;
+    }
+
+    .sections p {
+      font-size: 1.5rem;
+    }
+
+    .sections img {
+      margin-top: 20px;
+    }
+    .introduction {
+      text-align: center;
+    }
+
+    .introduction h1 {
+      color: #fff;
+    }
+
+    .introduction p {
+      color: #fff;
+    }
+
+    .introduction .buttons button {
+      background-color: #fff;
+      color: #333;
+    }
+
+    .languages .card {
+      border: none;
+      background-color: #333;
+      color: #fff;
+    }
+
+    .languages .card h5 {
+      color: #fff;
+    }
+
+    .languages .card p {
+      color: #fff;
+    }
+
+    button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #333;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .icons {
+      display: flex;
+      width: 50px;
+      height: 50px;
+    }
+
+    .card-text {
+      color: #fff;
+    }
+
+    .card-text2 {
+      color: black;
+    }
+
+    #work{
+        background-color: #171e22; /* Dark blue ocean color */
+    }
+
+    h2{
+        color: #fff;
+    }
+  </style>
+  <body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">My Portfolio</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#languages">Languages</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#work">Work</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">My Portfolio</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#languages">Languages</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#work">Work</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <div class="sections">
-        <div class="introduction">
-            <h1>Hi, I'm Csongor</h1>
-            <p>Web developer & Lua Developer</p>
-            <img
-                src="https://scontent.fbud7-4.fna.fbcdn.net/v/t39.30808-6/322961371_707439404125353_2186459870773902488_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=dlCxs_DF60AAX_uGAnd&_nc_ht=scontent.fbud7-4.fna&oh=00_AfDmM_JZznVQEWiqtmFbVLt0ib7YfxKm2T2Vrjc2V2GkUw&oe=65D69770"
-                alt=""
-                class="profile-image rounded-circle img-fluid" 
-            />
-            <br>
-            <br>
-            <div class="buttons">
-                <button class="bg-dark text-white text-center py-3"><a href="">GitHub</a></button>
-                <button class="bg-dark text-white text-center py-3"><a href="">Discord</a></button>
-            </div>
+      <div class="introduction">
+        <h1>Hi, I'm Csongor</h1>
+        <p>Web developer & Lua Developer</p>
+        <img
+          src="https://scontent.fbud7-4.fna.fbcdn.net/v/t39.30808-6/322961371_707439404125353_2186459870773902488_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=dlCxs_DF60AAX_uGAnd&_nc_ht=scontent.fbud7-4.fna&oh=00_AfDmM_JZznVQEWiqtmFbVLt0ib7YfxKm2T2Vrjc2V2GkUw&oe=65D69770"
+          alt=""
+          class="profile-image rounded-circle img-fluid"
+        />
+        <br />
+        <br />
+        <div class="buttons">
+          <button class="bg-dark text-white text-center py-3">
+            <a href="">GitHub</a>
+          </button>
+          <button class="bg-dark text-white text-center py-3">
+            <a href="">Discord</a>
+          </button>
         </div>
-    </div>
+      </div>
     </div>
 
     <main>
-        <section id="languages" class="py-5 bg-darkblue">
-            <div class="container">
-                <h2 class="text-center mb-4">Languages</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">HTML</h5>
-                                <p class="card-text">Proficient</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">CSS</h5>
-                                <p class="card-text">Proficient</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">JavaScript</h5>
-                                <p class="card-text">Proficient</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">PHP</h5>
-                                <p class="card-text">Proficient</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card mb-4">
-                            <div class="card-body">
-                                <h5 class="card-title">LUA</h5>
-                                <p class="card-text">Proficient</p>
-                            </div>
-                        </div>
-                    </div>
+      <section id="languages" class="py-5 bg-dark">
+        <div class="container">
+          <h2 class="text-center mb-4">Languages</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">HTML</h5>
+                  <p class="card-text2">Proficient</p>
                 </div>
+              </div>
             </div>
-        </section>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">CSS</h5>
+                  <p class="card-text2">Proficient</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">JavaScript</h5>
+                  <p class="card-text2">Proficient</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">PHP</h5>
+                  <p class="card-text2">Proficient</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <div class="card-body">
+                  <h5 class="card-title">LUA</h5>
+                  <p class="card-text2">Proficient</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="work" class="py-5 bg-light">
-            <div class="container">
-                <h2 class="text-center mb-4">Work</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card mb-4">
-                            
-                            <div class="card-body">
-                                <h5 class="card-title">Korona EMS</h5>
-                                <p class="card-text">A small project that grew itself out to a bigger one. It was originally to just learn PHP but now it's an actual website used by one of the biggest FiveM servers on Hungary.</p>
-                            </div>
-                            <img src="src/koronaems.png" class="card-img-top" alt="Work Image 1">
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card mb-4">
-                            
-                            <div class="card-body">
-                                <h5 class="card-title">FiveM Server</h5>
-                                <p class="card-text">I've worked on several FiveM servers, such as Florida State Roleplay, Savage RolePlay and also on my own servers</p>
-                            </div>
-                            <img src="src/koronaems.png" class="card-img-top" alt="Work Image 2">
-                        </div>
-                    </div>
+      <section id="work" class="py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Work</h2>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="card mb-4 bg-dark">
+                <div class="card-body">
+                  <h5 class="card-title"><a href="https://koronaems.hu/">Korona EMS</a></h5>
+                  <p class="card-text">
+                    A small project that grew itself out to a bigger one. It was
+                    originally to just learn PHP but now it's an actual website
+                    used by one of the biggest FiveM servers on Hungary.
+                  </p>
                 </div>
+                <img
+                  src="src/koronaems.png"
+                  class="card-img-top"
+                  alt="Work Image 1"
+                />
+              </div>
             </div>
-        </section>
+            <div class="col-md-6">
+              <div class="card mb-4 bg-dark">
+                <div class="card-body ">
+                  <h5 class="card-title"><a href="https://www.youtube.com/@cs0ng0r">FiveM Server Development</a></h5>
+                  <p class="card-text">
+                    I've worked on several FiveM servers, such as Florida State
+                    Roleplay and on my own servers which I've never opened to the public. I mainly post tutorials on my YouTube channel about FiveM development.   
+                  </p>
+                </div>
+                <img
+                  src="src/koronaems.png"
+                  class="card-img-top"
+                  alt="Work Image 2"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 My Portfolio</p>
+      <p>&copy; 2024 My Portfolio</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+  </body>
 </html>
