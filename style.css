@@ -1,16 +1,50 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    float: right;
+  }
 
+  ul {
+    display: flex;
+    list-style-type: none;
+  }
 
-.menu.active {
-    display: block;
-}
+  li {
+    margin-right: 1rem;
+  }
 
-/* CSS */
-.menu-icon {
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .menu-icon {
     display: none;
-}
+  }
 
-@media screen and (max-width: 768px) {
-    .menu-icon {
-        display: block;
+  @media (max-width: 768px) {
+    .menu {
+      display: none;
     }
-}
+
+    .menu-icon {
+      display: block;
+      cursor: pointer;
+    }
+
+    .menu-icon::before {
+      content: "\2630";
+      font-size: 1.5rem;
+    }
+
+    .menu-icon.active::before {
+      content: "\2715";
+    }
+
+    .menu-icon.active + .menu {
+      display: block;
+    }
+  }
